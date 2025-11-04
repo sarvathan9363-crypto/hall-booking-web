@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Custom PSG Tech UI tweaks --- */
+:root {
+  --card-radius: 8px;
+  --bg: #f3f4f6;        /* gray-100 for page background */
+  --card-bg: #ffffff;    /* white cards */
+  --psg-blue: #00539C;   /* PSG Tech blue */
+  --input-border: #d1d5db; /* gray-300 */
+}
+
+body {
+  @apply bg-[var(--bg)] font-sans;
+}
+
+/* Center login / content container */
+.login-card {
+  border-radius: var(--card-radius);
+  background: var(--card-bg);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  padding: 2rem;
+  max-width: 400px;
+  margin: 5% auto;
+}
+
+/* Buttons */
+.btn-psg {
+  @apply w-full py-2 rounded-md text-white font-medium text-center;
+  background-color: var(--psg-blue);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-psg:hover {
+  filter: brightness(0.95);
+}
+
+/* Form fields */
+.input-field {
+  @apply w-full px-3 py-2 border rounded-md text-gray-800 mb-4;
+  border: 1px solid var(--input-border);
+  transition: all 0.2s ease-in-out;
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 83, 156, 0.12);
+  border-color: var(--psg-blue);
+}
+
+/* Links */
+.link-psg {
+  color: var(--psg-blue);
+  text-decoration: underline;
+}
+
+.link-psg:hover {
+  filter: brightness(0.9);
+}
+
+/* Small headings / labels consistent with site */
+.label {
+  @apply text-gray-700 font-medium mb-1 block;
+}
